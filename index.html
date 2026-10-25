@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zinc, Lead & Silver Demand Sensing | Executive Pitch & Cockpit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+
+  <!-- Top Global Navigation Bar -->
+  <header class="top-navbar">
+    <div class="brand-section">
+      <span class="hzl-badge">VEDANTA | HZL</span>
+      <div>
+        <div class="brand-title">Zinc, Lead & Silver Demand Sensing Platform</div>
+        <div class="brand-subtitle">Commercial Intelligence, Preemptive Import Defense & Dynamic Pricing Cockpit</div>
+      </div>
+    </div>
+
+    <!-- Dual Mode Switcher -->
+    <div class="mode-switcher">
+      <button class="mode-btn active" data-mode="presentation">
+        <span>📊</span> Executive Pitch Deck
+      </button>
+      <button class="mode-btn" data-mode="cockpit">
+        <span>⚡</span> Live Decision Cockpit
+      </button>
+    </div>
+
+    <!-- Actions -->
+    <div class="nav-actions">
+      <button class="action-btn" id="toggle-notes-btn" title="Toggle Presenter Notes (Shortcut: P)">
+        <span>🎙️</span> Notes
+      </button>
+      <button class="action-btn" onclick="window.print()" title="Print / Export Deck as PDF">
+        <span>📑</span> Export
+      </button>
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       VIEW 1: EXECUTIVE PITCH DECK (PRESENTATION MODE)
+       ====================================================================== -->
+  <main id="presentation-view">
+    <div class="deck-container">
+      <div class="slide-wrapper glass-panel">
+        <div id="slide-content-area">
+          <!-- Slide dynamically injected via src/app.js -->
+        </div>
+
+        <!-- Speaker Notes Drawer -->
+        <div class="speaker-notes-panel" id="speaker-notes-panel">
+          <div class="notes-header">
+            <span>🎙️</span> Speaker Notes / Talking Points for Executive Pitch
+          </div>
+          <div class="notes-content" id="notes-content">
+            <!-- Notes injected dynamically -->
+          </div>
+        </div>
+
+        <!-- Presentation Controls Footer -->
+        <div class="deck-controls">
+          <div class="slide-counter" id="slide-counter">Slide 1 of 10</div>
+          <div class="deck-nav-buttons">
+            <button class="deck-btn" id="prev-slide-btn">
+              <span>←</span> Previous
+            </button>
+            <button class="deck-btn" id="next-slide-btn">
+              Next <span>→</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ======================================================================
+       VIEW 2: INTERACTIVE DECISION COCKPIT (DEMO MODE)
+       ====================================================================== -->
+  <main id="cockpit-view">
+    
+    <!-- Cockpit Header Controls -->
+    <div class="cockpit-header">
+      <!-- Metal Selector -->
+      <div class="metal-selector">
+        <button class="metal-btn active" data-metal="zinc">
+          <span>🔘</span> Zinc (SHG / CGG / PW)
+        </button>
+        <button class="metal-btn" data-metal="lead">
+          <span>🔋</span> Lead (99.99% / Alloys)
+        </button>
+        <button class="metal-btn" data-metal="silver">
+          <span>✨</span> Silver (Solar / Bullion)
+        </button>
+      </div>
+
+      <!-- Macro Scenario Dropdown -->
+      <div class="scenario-dropdown-wrapper">
+        <span style="font-size:13px; color:var(--text-muted); font-weight:600;">Simulate Scenario:</span>
+        <select class="scenario-select" id="scenario-select">
+          <option value="base">Baseline Plan (Budget 2026-27)</option>
+          <option value="infra_boom">Aggressive Infra Push (+18% Capex)</option>
+          <option value="china_curb">China Smelter Winter Production Curbs</option>
+          <option value="fta_surge">Zero-Duty FTA Import Surge (Korea/Japan)</option>
+          <option value="solar_surge">National Solar Mission 50GW Sprint (Ag)</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Executive KPI Deck -->
+    <section class="kpi-deck">
+      <div class="kpi-box glass-panel">
+        <div class="kpi-title">
+          <span>PROJECTED DOMESTIC DEMAND</span>
+          <span>📈</span>
+        </div>
+        <div class="kpi-value-row">
+          <span class="kpi-main-val" id="kpi-demand-val">98,200</span>
+          <span class="kpi-unit" id="kpi-demand-unit">MT/mo</span>
+        </div>
+        <span class="kpi-badge badge-positive" id="kpi-demand-badge">+1.8% MoM</span>
+      </div>
+
+      <div class="kpi-box glass-panel">
+        <div class="kpi-title">
+          <span>RECOMMENDED BENCHMARK PREMIUM</span>
+          <span>💎</span>
+        </div>
+        <div class="kpi-value-row">
+          <span class="kpi-main-val" id="kpi-premium-val">$152</span>
+          <span class="kpi-unit" id="kpi-premium-unit">USD / MT</span>
+        </div>
+        <span class="kpi-badge badge-positive" id="kpi-premium-badge">+$7 vs Current</span>
+      </div>
+
+      <div class="kpi-box glass-panel">
+        <div class="kpi-title">
+          <span>IMPORT THREAT & ARBITRAGE</span>
+          <span>🚢</span>
+        </div>
+        <div class="kpi-value-row">
+          <span class="kpi-main-val" style="font-size:22px; color:var(--accent-crimson);" id="kpi-import-threat">CRITICAL</span>
+        </div>
+        <span style="font-size:12px; color:var(--text-muted);" id="kpi-arbitrage-sub">Nhava Sheva: -$18/t Parity Gap</span>
+      </div>
+
+      <div class="kpi-box glass-panel">
+        <div class="kpi-title">
+          <span>SERVICEABLE MARKET CAPTURE (SOM)</span>
+          <span>🎯</span>
+        </div>
+        <div class="kpi-value-row">
+          <span class="kpi-main-val" id="kpi-share-val">78.0%</span>
+          <span class="kpi-unit">of SAM</span>
+        </div>
+        <span style="font-size:12px; color:var(--text-muted);" id="kpi-share-sub">HZL SOM: 61,200 MT / SAM: 78,500 MT</span>
+      </div>
+    </section>
+
+    <!-- 2-Column Section: Forecast Chart & Port Radar -->
+    <section class="cockpit-grid-2col">
+      <!-- 12-Month Demand Forecast Chart -->
+      <div class="glass-panel" style="padding:22px;">
+        <div class="card-header">
+          <div class="card-title">
+            <span>📊</span> 12-Month Rolling Demand Sensing & Probabilistic Bounds
+          </div>
+          <span class="card-badge">TFT + Quantile Ensemble</span>
+        </div>
+        <div class="chart-container">
+          <canvas id="forecast-chart-canvas"></canvas>
+        </div>
+      </div>
+
+      <!-- Port Import Radar -->
+      <div class="glass-panel" style="padding:22px;">
+        <div class="card-header">
+          <div class="card-title">
+            <span>🚢</span> Port Import Radar & Landed Parity Arbitrage
+          </div>
+          <span class="card-badge">45-Day Advance Radar</span>
+        </div>
+        <div class="port-cards-list" id="port-radar-list">
+          <!-- Port items injected via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 3-Column Section: TAM/SAM, Explainability & Allocation Simulator -->
+    <section class="cockpit-grid-3col">
+      <!-- TAM vs. SAM Explorer -->
+      <div class="glass-panel" style="padding:22px;">
+        <div class="card-header">
+          <div class="card-title">
+            <span>🎯</span> TAM vs. SAM Market Capture
+          </div>
+        </div>
+        <div class="tamsam-breakdown" id="tamsam-breakdown-container">
+          <!-- Injected via JS -->
+        </div>
+      </div>
+
+      <!-- Explainable AI (SHAP Waterfall) -->
+      <div class="glass-panel" style="padding:22px;">
+        <div class="card-header">
+          <div class="card-title">
+            <span>🔍</span> Driver Waterfall (Explainability)
+          </div>
+          <span class="card-badge">SHAP Attribution</span>
+        </div>
+        <div class="shap-list" id="shap-waterfall-container">
+          <!-- Injected via JS -->
+        </div>
+      </div>
+
+      <!-- Channel Allocation & E-Auction Simulator -->
+      <div class="glass-panel allocation-simulator">
+        <div class="card-header" style="margin-bottom:0;">
+          <div class="card-title">
+            <span>⚖️</span> Allocation & Auction Optimizer
+          </div>
+          <span class="card-badge">Dynamic Channel Split</span>
+        </div>
+
+        <div class="slider-group">
+          <div class="slider-row">
+            <div class="slider-header">
+              <span>Annual MoU Contracts (Key Accounts)</span>
+              <span id="mou-pct-label" style="color:var(--accent-cyan);">70%</span>
+            </div>
+            <input type="range" class="channel-slider" id="slider-mou" min="40" max="85" value="70">
+          </div>
+
+          <div class="slider-row">
+            <div class="slider-header">
+              <span>Monthly Direct Spot Sales</span>
+              <span id="spot-pct-label" style="color:var(--accent-gold);">20%</span>
+            </div>
+            <input type="range" class="channel-slider" id="slider-spot" min="5" max="40" value="20">
+          </div>
+
+          <div class="slider-row">
+            <div class="slider-header">
+              <span>Dynamic E-Auctions</span>
+              <span id="auction-pct-label" style="color:var(--accent-emerald);">10%</span>
+            </div>
+            <input type="range" class="channel-slider" id="slider-auction" min="0" max="30" value="10">
+          </div>
+        </div>
+
+        <div class="allocation-output-grid">
+          <div class="alloc-metric">
+            <span class="alloc-label">MoU Volume</span>
+            <span class="alloc-val" id="alloc-mou-vol">42,840 MT</span>
+          </div>
+          <div class="alloc-metric">
+            <span class="alloc-label">Spot Volume</span>
+            <span class="alloc-val" id="alloc-spot-vol">12,240 MT</span>
+          </div>
+          <div class="alloc-metric">
+            <span class="alloc-label">Auction Volume</span>
+            <span class="alloc-val" id="alloc-auction-vol">6,120 MT</span>
+          </div>
+          <div class="alloc-metric" style="grid-column: span 3; border-top: 1px solid var(--border-subtle); padding-top: 8px;">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <div>
+                <span class="alloc-label">Blended Avg Premium:</span>
+                <span class="alloc-val" style="color:var(--accent-cyan); font-size:16px;" id="alloc-blended-premium">$149.2/MT</span>
+              </div>
+              <div>
+                <span class="alloc-label">Incremental EBITDA:</span>
+                <span class="alloc-val" style="color:var(--accent-emerald); font-size:16px;" id="alloc-incremental-ebitda">+$184k/mo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="font-size:12px; color:var(--text-muted); background:rgba(255,255,255,0.02); padding:10px; border-radius:6px;">
+          <strong>Recommended E-Auction Floor:</strong> <span id="alloc-auction-floor" style="color:#FFFFFF; font-weight:700;">$2,993 / MT</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Decision Governance & Approval Section (Human-in-the-Loop) -->
+    <section class="decision-approval-box">
+      <div class="approval-text">
+        <div class="approval-title">
+          <span>🛡️</span> Human-in-the-Loop Governance: Executive Review & Policy Sign-off
+        </div>
+        <div class="approval-sub">
+          The system provides decision-support intelligence. Final monthly premium dispatch schedules and auction volume tranches require explicit executive sign-off.
+        </div>
+      </div>
+      <div class="approval-btn-group">
+        <button class="btn-override" id="btn-override-decision">
+          <span>✏️</span> Log Manual Override
+        </button>
+        <button class="btn-approve" id="btn-approve-decision">
+          <span>✓</span> Approve Sensed Policy
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Governance Modal -->
+  <div class="modal-overlay" id="approval-modal">
+    <div class="modal-box">
+      <h3 class="modal-title" id="modal-action-title">Executive Action Rationale</h3>
+      <p style="font-size:13px; color:var(--text-muted); margin-bottom:12px;">
+        Please review or specify the strategic business rationale to record in the permanent Commercial Audit Trail:
+      </p>
+      <textarea class="modal-textarea" id="modal-rationale-input"></textarea>
+      <div class="modal-actions">
+        <button class="action-btn" id="modal-cancel-btn">Cancel</button>
+        <button class="btn-approve" id="modal-submit-btn">Submit to Audit Trail</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./src/app.js"></script>
+</body>
+</html>

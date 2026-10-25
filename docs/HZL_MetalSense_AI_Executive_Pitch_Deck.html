@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MetalSense AI • Executive Boardroom Presentation (HZL)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @media print {
+      .no-print { display: none !important; }
+      .slide-page { page-break-after: always; display: block !important; }
+    }
+  </style>
+</head>
+<body class="bg-slate-100 text-slate-900 font-sans min-h-screen p-4 md:p-8 flex flex-col justify-between">
+
+  <div class="max-w-6xl w-full mx-auto space-y-4">
+    <!-- Header Controls -->
+    <header class="no-print flex flex-wrap items-center justify-between gap-4 p-4 rounded-xl bg-white border border-slate-200 shadow-sm">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-amber-500 to-sky-600 flex items-center justify-center text-white font-bold text-lg shadow-sm">
+          HZL
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-bold text-amber-700 uppercase tracking-widest font-mono">
+              Executive Boardroom Pitch Deck
+            </span>
+            <span class="text-xs text-slate-300">•</span>
+            <span class="text-xs text-slate-500 font-medium">Commercial Leadership & EBITDA Transformation</span>
+          </div>
+          <h1 class="text-base font-extrabold text-slate-900">
+            MetalSense AI: Domestic Demand Sensing & Commercial Optimization Platform
+          </h1>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <!-- Slide Indicator -->
+        <div class="flex items-center gap-1 text-xs font-mono bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200 text-slate-700">
+          <span>Slide</span>
+          <span id="slideNum" class="font-bold text-sky-700">1</span>
+          <span class="text-slate-400">/</span>
+          <span>10</span>
+        </div>
+
+        <!-- Prev / Next Buttons -->
+        <button onclick="prevSlide()" class="p-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition font-bold" title="Previous Slide (Left Arrow)">
+          ◀
+        </button>
+        <button onclick="nextSlide()" class="p-2 rounded-lg bg-sky-600 hover:bg-sky-700 text-white transition font-bold shadow-sm" title="Next Slide (Right Arrow or Space)">
+          ▶
+        </button>
+        <button onclick="window.print()" class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold border border-slate-200 transition" title="Print or Save to PDF">
+          🖨️ PDF Export
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Slide Canvas -->
+    <main id="slideCanvas" class="min-h-[580px] bg-white border border-slate-200 shadow-lg rounded-2xl p-8 relative flex flex-col justify-between">
+
+      <!-- SLIDE 1 -->
+      <section id="slide-1" class="slide-content space-y-6 my-auto text-center max-w-4xl mx-auto">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 border border-sky-200 text-sky-700 text-xs font-mono font-bold tracking-wider uppercase">
+          ✨ Strategic Commercial Transformation Platform
+        </div>
+        <h2 class="text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+          MetalSense AI: Domestic Demand Sensing & Commercial Optimization
+        </h2>
+        <p class="text-xl font-medium text-slate-600">
+          Tailored for <span class="text-slate-900 font-bold">Hindustan Zinc Limited (HZL – Vedanta Group)</span>
+        </p>
+        <p class="text-sm text-slate-600 max-w-2xl mx-auto leading-relaxed">
+          Unlocking <span class="text-emerald-700 font-bold">+₹220 to ₹310 Crores ($26M–$37M) Annual EBITDA</span> by transforming physical premium realization, defending against seaborne foreign imports, and dynamically navigating global war & supply disruptions.
+        </p>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 max-w-3xl mx-auto text-left">
+          <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 shadow-sm">
+            <div class="text-[10px] text-slate-500 uppercase font-mono">Covered Metals</div>
+            <div class="text-sm font-bold text-slate-900 mt-0.5">Zn, Pb, Ag, Cd</div>
+          </div>
+          <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 shadow-sm">
+            <div class="text-[10px] text-slate-500 uppercase font-mono">Smelter Facilities</div>
+            <div class="text-sm font-bold text-slate-900 mt-0.5">4 Strategic Hubs</div>
+          </div>
+          <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 shadow-sm">
+            <div class="text-[10px] text-slate-500 uppercase font-mono">Annual EBITDA ROI</div>
+            <div class="text-sm font-bold text-emerald-700 mt-0.5">+₹220 – ₹310 Cr</div>
+          </div>
+          <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 shadow-sm">
+            <div class="text-[10px] text-slate-500 uppercase font-mono">Time-to-Value</div>
+            <div class="text-sm font-bold text-sky-700 mt-0.5">60-Day Pilot</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 2 -->
+      <section id="slide-2" class="slide-content space-y-6 hidden">
+        <div>
+          <span class="text-xs font-mono font-bold text-rose-700 uppercase tracking-wider">
+            Problem Statement & Commercial Leakage
+          </span>
+          <h2 class="text-2xl font-black text-slate-900 mt-1">
+            The Burning Platform: Why HZL Currently Leaves ₹250+ Cr on the Table
+          </h2>
+          <p class="text-xs text-slate-500 mt-1">
+            Despite holding lowest-decile captive mining costs, HZL faces commercial blindspots that reduce Net Sales Realization (NSR).
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="p-4 rounded-xl bg-slate-50 border border-rose-200 space-y-2">
+            <div class="font-bold text-rose-700 text-sm">1. Seaborne Foreign Import Incursions</div>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Over <strong>105,000 MT of foreign zinc</strong> enters Indian ports annually from South Korea (under 0% India-Korea CEPA) and Kazakhstan. Sales teams lack real-time visibility into competitors' landed cost parity down to port handling and rail freight netting.
+            </p>
+            <div class="text-[11px] font-mono text-rose-800 bg-rose-50 p-2 rounded border border-rose-200 font-semibold">
+              Annual Margin Opportunity Lost: ₹75+ Crores
+            </div>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-50 border border-rose-200 space-y-2">
+            <div class="font-bold text-rose-700 text-sm">2. Rigid 80:20 LTC Allocation Inertia</div>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              HZL traditionally locks ~80% of volume into Long-Term Contracts (LTC) based on static annual formulas. When market backwardation spikes spot premiums by +$25/MT, HZL cannot capture the upside because production is pre-committed on discounted terms.
+            </p>
+            <div class="text-[11px] font-mono text-rose-800 bg-rose-50 p-2 rounded border border-rose-200 font-semibold">
+              Annual NSR Optimization Forgone: ₹85+ Crores
+            </div>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-50 border border-rose-200 space-y-2">
+            <div class="font-bold text-rose-700 text-sm">3. Reactive Lag to Geopolitical & War Shocks</div>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              When the Red Sea was blocked or Middle East tensions surged, ocean container rates jumped 240% overnight. It took manual sales teams 4–6 weeks to recognize that foreign import costs had surged by ₹6,800/MT, missing the window to raise prompt auction reserve prices.
+            </p>
+            <div class="text-[11px] font-mono text-rose-800 bg-rose-50 p-2 rounded border border-rose-200 font-semibold">
+              Pricing Headroom Unrealized: ₹50+ Crores
+            </div>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-50 border border-rose-200 space-y-2">
+            <div class="font-bold text-rose-700 text-sm">4. Disconnected Macro & Downstream Visibility</div>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Downstream shifts (ALMM solar mandates, Gati Shakti crash barrier tenders, EV auxiliary battery changes) are tracked in siloed PDF reports rather than mathematically regressed into forward production quotas.
+            </p>
+            <div class="text-[11px] font-mono text-rose-800 bg-rose-50 p-2 rounded border border-rose-200 font-semibold">
+              Working Capital & Inventory Misalignment: ₹40+ Crores
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 3 -->
+      <section id="slide-3" class="slide-content space-y-6 hidden">
+        <div>
+          <span class="text-xs font-mono font-bold text-sky-700 uppercase tracking-wider">
+            Architecture & Solution Overview
+          </span>
+          <h2 class="text-2xl font-black text-slate-900 mt-1">
+            The Tri-Layered MetalSense AI Architecture
+          </h2>
+          <p class="text-xs text-slate-500 mt-1">
+            An end-to-end commercial operating system bridging global macroeconomic signals with HZL smelter dispatches.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="p-5 rounded-xl bg-slate-50 border border-sky-200 space-y-3">
+            <div class="w-10 h-10 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center font-bold">01</div>
+            <h3 class="text-base font-bold text-slate-900">Macro Demand Sensing</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Ingests Indian downstream economic regressors (steel production, auto OEM builds, MNRE ALMM solar cell installations) to forecast 1-to-6 month MoM demand with 80% & 95% confidence intervals.
+            </p>
+            <div class="pt-2 text-[11px] font-mono text-sky-800 font-semibold">
+              Instant What-If sensitivity sliders for steel and battery shocks.
+            </div>
+          </div>
+          <div class="p-5 rounded-xl bg-slate-50 border border-emerald-200 space-y-3">
+            <div class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold">02</div>
+            <h3 class="text-base font-bold text-slate-900">EXIM Landed Parity Engine</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Parses Indian Customs Bill of Lading data to track seaborne imports (Tata, JSW, POSCO, Exide). Computes precise landed cost in ₹/MT including BCD (7.5%), Korea CEPA (0%), freight, and port wharfage.
+            </p>
+            <div class="pt-2 text-[11px] font-mono text-emerald-800 font-semibold">
+              Reveals exact pricing headroom vs Korean/Kazakh shipments.
+            </div>
+          </div>
+          <div class="p-5 rounded-xl bg-slate-50 border border-amber-200 space-y-3">
+            <div class="w-10 h-10 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center font-bold">03</div>
+            <h3 class="text-base font-bold text-slate-900">LP Commercial NSR Optimizer</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Mathematical solver that inputs available production by smelter and outputs optimal LTC vs Spot Auction split. Incorporates spot price elasticity and customer tier quotas to maximize total Net Sales Realization.
+            </p>
+            <div class="pt-2 text-[11px] font-mono text-amber-800 font-semibold">
+              Generates official Commercial Allocation Directive Memorandum.
+            </div>
+          </div>
+        </div>
+        <div class="p-3.5 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-between text-xs text-slate-700 font-mono">
+          <span>Backed by Supabase PostgreSQL 16 + pgvector (1536-dim semantic intelligence)</span>
+          <span class="text-emerald-700 font-semibold">● Google Gemini 2.5 Flash Connected</span>
+        </div>
+      </section>
+
+      <!-- SLIDE 4 -->
+      <section id="slide-4" class="slide-content space-y-6 hidden">
+        <div>
+          <span class="text-xs font-mono font-bold text-amber-700 uppercase tracking-wider">
+            Geopolitical War Room (2024–2026 Grounding)
+          </span>
+          <h2 class="text-2xl font-black text-slate-900 mt-1">
+            Real-World Geopolitical & War Scenarios Ingested by the Platform
+          </h2>
+          <p class="text-xs text-slate-500 mt-1">
+            Demonstrating how MetalSense AI turns global chaos and maritime blockades into HZL EBITDA expansions.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <div class="p-4 rounded-xl bg-slate-50 border border-amber-200 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-slate-900 text-sm">1. Red Sea Maritime Blockade</span>
+              <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-mono font-bold">+₹36.8 Cr</span>
+            </div>
+            <p class="text-slate-600 leading-relaxed">
+              Houthi missile attacks forced seaborne carriers around Cape of Good Hope (+18 days, freight +$80/MT). Seaborne zinc/lead into JNPT surged by ₹6,800/MT.
+            </p>
+            <div class="p-2 bg-amber-50 rounded font-mono text-[11px] text-amber-900 font-semibold border border-amber-200">
+              Platform Action: Lifted spot auction floor by +$24/MT; shifted 10% volume to prompt e-auction pool.
+            </div>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-50 border border-amber-200 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-slate-900 text-sm">2. Middle East Conflict & Silver Run</span>
+              <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-mono font-bold">+₹142.5 Cr</span>
+            </div>
+            <p class="text-slate-600 leading-relaxed">
+              Regional conflict triggered massive institutional safe-haven allocation. Silver surged above $34/oz and MCX broke ₹98,000/kg.
+            </p>
+            <div class="p-2 bg-amber-50 rounded font-mono text-[11px] text-amber-900 font-semibold border border-amber-200">
+              Platform Action: Shifted Pantnagar silver to 60% prompt cash auctions, eliminating 60-day credit risk.
+            </div>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-50 border border-amber-200 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-slate-900 text-sm">3. European Smelter Curtailments</span>
+              <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-mono font-bold">+₹54.0 Cr</span>
+            </div>
+            <p class="text-slate-600 leading-relaxed">
+              Nyrstar and Glencore throttled 450ktpa of zinc capacity due to power spark spreads. Rotterdam physical premiums leaped to +$220/MT.
+            </p>
+            <div class="p-2 bg-amber-50 rounded font-mono text-[11px] text-amber-900 font-semibold border border-amber-200">
+              Platform Action: Export arbitrage opened; routed 20% of Chanderiya output to Kandla/Mundra for Antwerp delivery.
+            </div>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-50 border border-amber-200 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-slate-900 text-sm">4. Global Zinc Concentrate TC Squeeze</span>
+              <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-mono font-bold">+₹88.2 Cr</span>
+            </div>
+            <p class="text-slate-600 leading-relaxed">
+              Tara mine and Cobre Panama shutdowns plunged treatment charges (TCs) below $10/dmt. Non-integrated foreign smelters operated at severe losses.
+            </p>
+            <div class="p-2 bg-amber-50 rounded font-mono text-[11px] text-amber-900 font-semibold border border-amber-200">
+              Platform Action: Monetized HZL's captive 100% ore advantage by maintaining full domestic run-rates.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 5 -->
+      <section id="slide-5" class="slide-content space-y-6 hidden">
+        <div>
+          <span class="text-xs font-mono font-bold text-sky-700 uppercase tracking-wider">Module A Deep-Dive</span>
+          <h2 class="text-2xl font-black text-slate-900 mt-1">
+            Executive Demand Sensing: Econometric MoM Forecasting
+          </h2>
+          <p class="text-xs text-slate-500 mt-1">
+            Replacing spreadsheet gut-feel with rigorous time-series regression and confidence intervals.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+            <div class="text-xs font-semibold text-slate-500">Multivariate Econometric Fit</div>
+            <div class="text-3xl font-black font-mono text-emerald-700">94.2%</div>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Trained on 7 years of Indian industrial production (IIP), automotive vehicle assembly numbers, coated steel lines, and solar installations.
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+            <div class="text-xs font-semibold text-slate-500">Confidence Interval Horizon</div>
+            <div class="text-3xl font-black font-mono text-sky-700">1 to 6 Months</div>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Generates upper and lower boundaries at 80% and 95% statistical significance, protecting production planning against demand shocks.
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+            <div class="text-xs font-semibold text-slate-500">Live Sensitivity Multipliers</div>
+            <div class="text-3xl font-black font-mono text-amber-700">Real-Time</div>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Sales leaders can toggle downstream steel (+/-10%), EV battery (+/-10%), and solar PV line utilization to instantly view simulated demand shifts.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 6 -->
+      <section id="slide-6" class="slide-content space-y-6 hidden">
+        <div>
+          <span class="text-xs font-mono font-bold text-amber-700 uppercase tracking-wider">Module B Deep-Dive</span>
+          <h2 class="text-2xl font-black text-slate-900 mt-1">
+            TAM & SAM Market Segmentation & EXIM Bill of Lading Intelligence
+          </h2>
+          <p class="text-xs text-slate-500 mt-1">
+            Converting Indian customs import manifests into targeted customer substitution playbooks.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+            <div class="font-bold text-slate-900 text-sm">Domestic Consumption Sizing (Zinc)</div>
+            <div class="grid grid-cols-3 gap-2 text-center text-xs pt-1">
+              <div class="p-2 bg-sky-50 rounded border border-sky-200">
+                <div class="text-slate-500">HZL Sales</div>
+                <div class="font-bold text-sky-700 text-sm">740k MT</div>
+                <div class="text-[10px] text-slate-500">67.3% Share</div>
+              </div>
+              <div class="p-2 bg-slate-100 rounded border border-slate-200">
+                <div class="text-slate-500">Recycled Scrap</div>
+                <div class="font-bold text-slate-800 text-sm">255k MT</div>
+                <div class="text-[10px] text-slate-500">23.2% Share</div>
+              </div>
+              <div class="p-2 bg-amber-50 rounded border border-amber-200">
+                <div class="text-slate-500">Imports</div>
+                <div class="font-bold text-amber-700 text-sm">105k MT</div>
+                <div class="text-[10px] text-slate-500">9.5% Contestable</div>
+              </div>
+            </div>
+            <p class="text-xs text-slate-600 pt-2 leading-relaxed">
+              Total Addressable Market (TAM) is 1.1M MT/year. The 105,000 MT import contestable slice represents ₹2,860 Cr of potential win-back revenue.
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+            <div class="font-bold text-slate-900 text-sm">Actionable Importer Playbooks</div>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Every shipment entering JNPT, Mundra, or Chennai is tracked by consignee, origin smelter (Korea Zinc, Kazzinc), duty type, and landed cost.
+            </p>
+            <div class="p-2.5 bg-sky-50 rounded-lg border border-sky-200 text-xs text-slate-700 space-y-1">
+              <div class="font-bold text-sky-900">Example Playbook: Tata Steel (4,200 MT / mo)</div>
+              <div>Import Landed: ₹2,72,500/MT (Korea CEPA 0% duty). HZL Ex-works: ₹2,76,700/MT.</div>
+              <div class="text-sky-800 font-semibold">Recommended Strategy: Offer ₹4,500/MT direct rail freight rebate from Chanderiya to Kalinganagar to win 100% primary share.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 7 -->
+      <section id="slide-7" class="slide-content space-y-6 hidden">
+        <div>
+          <span class="text-xs font-mono font-bold text-sky-700 uppercase tracking-wider">Module C Deep-Dive</span>
+          <h2 class="text-2xl font-black text-slate-900 mt-1">
+            Global Exchange Arbitrage & Gemini AI Market Intelligence
+          </h2>
+          <p class="text-xs text-slate-500 mt-1">
+            Real-time multi-exchange parity tracking (LME, SHFE, MCX, CME) combined with LLM sentiment analysis.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-3">
+            <div class="font-bold text-slate-900 text-sm">Cross-Exchange Parity Board</div>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Monitors the SHFE/LME ratio (normally 8.0–8.2). When the ratio climbs to 8.44, Chinese import arbitrage opens, pulling global metal toward Asia and tightening domestic Indian spot supply.
+            </p>
+            <div class="p-3 bg-white rounded-lg border border-slate-200 font-mono text-xs space-y-1">
+              <div class="flex justify-between"><span>LME Official Cash:</span><span class="font-bold text-slate-900">$2,885.50/MT</span></div>
+              <div class="flex justify-between"><span>MCX Domestic Spot:</span><span class="font-bold text-emerald-700">₹278.40/kg</span></div>
+              <div class="flex justify-between"><span>USD/INR Exchange Rate:</span><span class="font-bold text-amber-700">₹86.65</span></div>
+              <div class="flex justify-between"><span>Realized India Premium:</span><span class="font-bold text-sky-700">+$135/MT over LME</span></div>
+            </div>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-3">
+            <div class="font-bold text-slate-900 text-sm">Gemini AI Semantic Intelligence Engine</div>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Google Gemini 2.5 Flash ingests regulatory notifications, DGTR safeguard duties, power curtailments, and mine disruptions, scoring each event (-1.0 to +1.0) and prescribing actionable directives.
+            </p>
+            <div class="p-3 bg-sky-50 rounded-lg border border-sky-200 text-xs space-y-1 text-slate-700">
+              <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold font-mono text-[10px]">BULLISH (+0.82)</span>
+              <div class="font-bold text-slate-900">European Smelter Curtailment Extension</div>
+              <div class="text-[11px]">Directive: Hold firm on Indian SHG physical premiums (+135/MT). Reject customer discount requests as seaborne imports face container surcharges.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 8 -->
+      <section id="slide-8" class="slide-content space-y-6 hidden">
+        <div>
+          <span class="text-xs font-mono font-bold text-emerald-700 uppercase tracking-wider">Module D Deep-Dive</span>
+          <h2 class="text-2xl font-black text-slate-900 mt-1">
+            Commercial Premium & Monthly Auction Allocation Optimizer
+          </h2>
+          <p class="text-xs text-slate-500 mt-1">
+            Linear programming optimization to maximize Net Sales Realization (NSR) across customer tiers.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+            <div class="font-bold text-slate-900 text-sm">Dynamic Volume Split: LTC vs Spot Auctions</div>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Instead of default 80% LTC / 20% spot, the LP solver recommends a <strong>65% LTC / 35% Spot split</strong> in bullish market conditions.
+            </p>
+            <div class="grid grid-cols-2 gap-2 text-center text-xs pt-1">
+              <div class="p-3 bg-sky-50 rounded-lg border border-sky-200">
+                <div class="text-slate-500">LTC Volume</div>
+                <div class="font-bold text-sky-700 text-lg">22,750 MT</div>
+                <div class="text-[10px] text-slate-500">Premium: +$128/MT</div>
+              </div>
+              <div class="p-3 bg-emerald-50 rounded-lg border border-emerald-200">
+                <div class="text-slate-500">Spot e-Auction</div>
+                <div class="font-bold text-emerald-700 text-lg">12,250 MT</div>
+                <div class="text-[10px] text-slate-500">Premium: +$148/MT</div>
+              </div>
+            </div>
+            <div class="p-2 bg-emerald-50 rounded border border-emerald-200 text-xs font-mono text-emerald-800 font-bold text-center">
+              Monthly Incremental Realization: +₹4.82 Crores
+            </div>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+            <div class="font-bold text-slate-900 text-sm">Automated Commercial Directives</div>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Generates enforceable dispatches for Chanderiya, Dariba, Debari, and Pantnagar, assigning quotas to strategic Tier-1 accounts (Tata, JSW) and prompt auction tranches.
+            </p>
+            <div class="p-3 bg-slate-100 rounded-lg border border-slate-200 text-xs font-mono space-y-1">
+              <div class="text-slate-900 font-bold">Commercial Memo Summary:</div>
+              <div>• Batch: 35,000 MT SHG Zinc (Chanderiya)</div>
+              <div>• Realized NSR: ₹2,84,320 / MT</div>
+              <div>• Total Gross Realization: ₹995.1 Crores</div>
+              <div>• Blended Premium: +$135.00 / MT over LME</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 9 -->
+      <section id="slide-9" class="slide-content space-y-6 hidden">
+        <div>
+          <span class="text-xs font-mono font-bold text-emerald-700 uppercase tracking-wider">Financial Impact</span>
+          <h2 class="text-2xl font-black text-slate-900 mt-1">
+            Measurable EBITDA ROI: +₹220 to ₹310 Crores Annually
+          </h2>
+          <p class="text-xs text-slate-500 mt-1">
+            Conservative, auditable value creation drivers benchmarked against HZL's 1.1M MT smelting volume.
+          </p>
+        </div>
+        <div class="overflow-x-auto rounded-xl border border-slate-200">
+          <table class="w-full text-left text-xs">
+            <thead class="bg-slate-50 text-slate-700 font-semibold border-b border-slate-200">
+              <tr>
+                <th class="p-3">Value Creation Pillar</th>
+                <th class="p-3">Underlying Lever</th>
+                <th class="p-3">Conservative Gain</th>
+                <th class="p-3">High-Impact Gain</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200">
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">1. Spot Premium Optimization</td>
+                <td class="p-3 text-slate-600">Capturing +$8–$15/MT prompt e-auction premium on 25–35% of smelter volume</td>
+                <td class="p-3 font-mono font-bold text-emerald-700">₹72 Cr</td>
+                <td class="p-3 font-mono font-bold text-emerald-700">₹98 Cr</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">2. Import Defense & Win-Back</td>
+                <td class="p-3 text-slate-600">Winning back 40,000–60,000 MT of contestable Korean/Kazakh import volume</td>
+                <td class="p-3 font-mono font-bold text-emerald-700">₹65 Cr</td>
+                <td class="p-3 font-mono font-bold text-emerald-700">₹88 Cr</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">3. Geopolitical Shock Capture</td>
+                <td class="p-3 text-slate-600">Dynamic parity adjustment during Red Sea, Middle East & European power disruptions</td>
+                <td class="p-3 font-mono font-bold text-emerald-700">₹48 Cr</td>
+                <td class="p-3 font-mono font-bold text-emerald-700">₹72 Cr</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">4. Working Capital & Inventory</td>
+                <td class="p-3 text-slate-600">Eliminating misallocated grade inventory across Pantnagar and Rajasthan</td>
+                <td class="p-3 font-mono font-bold text-emerald-700">₹35 Cr</td>
+                <td class="p-3 font-mono font-bold text-emerald-700">₹52 Cr</td>
+              </tr>
+              <tr class="bg-emerald-50/80 font-bold">
+                <td class="p-3 text-emerald-900">TOTAL ANNUAL EBITDA EXPANSION</td>
+                <td class="p-3 text-emerald-800">All 4 pillars combined across Zn, Pb, Ag, Cd</td>
+                <td class="p-3 font-mono text-emerald-900 text-sm">+₹220 Crores</td>
+                <td class="p-3 font-mono text-emerald-900 text-sm">+₹310 Crores</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- SLIDE 10 -->
+      <section id="slide-10" class="slide-content space-y-6 hidden">
+        <div>
+          <span class="text-xs font-mono font-bold text-sky-700 uppercase tracking-wider">Pilot Roadmap</span>
+          <h2 class="text-2xl font-black text-slate-900 mt-1">
+            60-Day Commercial Pilot & Integration Roadmap
+          </h2>
+          <p class="text-xs text-slate-500 mt-1">
+            Low-friction rollout with zero disruption to daily SAP/ERP operations.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-xs">
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+            <div class="font-bold text-sky-700">Days 1–15: Data Ingestion</div>
+            <p class="text-slate-600 leading-relaxed">
+              Connect Supabase schema to HZL SAP sales history and subscribe to ICEGATE customs manifests for JNPT/Mundra ports.
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+            <div class="font-bold text-sky-700">Days 16–30: Model Calibration</div>
+            <p class="text-slate-600 leading-relaxed">
+              Calibrate regional price elasticities for North, West, South, and East clusters. Ground historical backtests against actuals.
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+            <div class="font-bold text-sky-700">Days 31–45: Parallel Run</div>
+            <p class="text-slate-600 leading-relaxed">
+              Run MetalSense AI recommendations alongside existing monthly marketing meetings for Zinc and Lead batches.
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+            <div class="font-bold text-emerald-700">Days 46–60: Commercial Go-Live</div>
+            <p class="text-slate-600 leading-relaxed">
+              Formal rollout of auction quota directives across all 4 smelters. Measure verified NSR improvements and EBITDA gains.
+            </p>
+          </div>
+        </div>
+        <div class="p-4 rounded-xl bg-gradient-to-r from-sky-50 to-blue-50 border border-sky-200 text-center space-y-2">
+          <div class="text-base font-bold text-slate-900">Next Step: Execute 60-Day Chanderiya & Pantnagar Pilot</div>
+          <p class="text-xs text-slate-600 max-w-xl mx-auto">
+            Experience real-time domestic demand sensing, EXIM landed cost defense, and premium optimization with your actual commercial data.
+          </p>
+        </div>
+      </section>
+
+      <!-- Slide Footer -->
+      <footer class="pt-4 mt-6 border-t border-slate-200 flex flex-wrap items-center justify-between text-xs text-slate-500">
+        <div class="flex items-center gap-2">
+          <span class="font-bold text-slate-700">MetalSense AI Platform</span>
+          <span>•</span>
+          <span>Hindustan Zinc Limited (HZL – Vedanta Group)</span>
+        </div>
+        <div class="font-mono text-[11px] text-slate-400">
+          Press [◀] or [▶] / Spacebar to navigate • [P] to export PDF
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    let currentSlideIndex = 1;
+    const totalSlides = 10;
+
+    function showSlide(index) {
+      if (index < 1 || index > totalSlides) return;
+      currentSlideIndex = index;
+
+      document.querySelectorAll('.slide-content').forEach(el => el.classList.add('hidden'));
+      const activeEl = document.getElementById('slide-' + index);
+      if (activeEl) {
+        activeEl.classList.remove('hidden');
+      }
+
+      document.getElementById('slideNum').textContent = index;
+    }
+
+    function nextSlide() {
+      if (currentSlideIndex < totalSlides) {
+        showSlide(currentSlideIndex + 1);
+      }
+    }
+
+    function prevSlide() {
+      if (currentSlideIndex > 1) {
+        showSlide(currentSlideIndex - 1);
+      }
+    }
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+        nextSlide();
+      } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+        prevSlide();
+      } else if (e.key === 'p' || e.key === 'P') {
+        window.print();
+      }
+    });
+  </script>
+</body>
+</html>
